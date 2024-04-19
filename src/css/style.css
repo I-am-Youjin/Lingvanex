@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.section {
+  padding-top: 70px;
+  /* display: flex; */
+  /* flex-direction: column;
+  align-items: center; */
+}
+
+.section-info {
+  max-width: 800px;
+  margin: 0 auto 64px;
+}
+.title {
+  font-family: "Inter";
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 100%;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: #000;
+}
+
+.section_title {
+  margin-bottom: 32px;
+}
+
+.description {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: rgba(42, 43, 47, 0.8);
+}
+
+.section_description {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.input_container {
+  position: relative;
+}
+
+.slider_btn {
+  position: absolute;
+  visibility: hidden;
+}
+.radio-label {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  text-align: center;
+  color: #000;
+  padding: 16px 32px;
+  border-radius: 12px;
+  background: #f4f6fd;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.radio-label:hover {
+  color: #fff;
+}
+.radio-label-checked {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  text-align: center;
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 12px;
+  background: #0146fe;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider_items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.slider_item {
+  position: relative;
+  max-width: 1137px;
+  border: 2px solid rgba(0, 0, 0, 0.04);
+  border-radius: 32px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+  background: #fff;
+  padding: 42px;
+  display: flex;
+  transition: 0.3s;
+  margin-bottom: 120px;
+}
+
+@media (max-width: 1024px) {
+  .slider_item {
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+  }
+}
+
+@media (max-width: 680px) {
+  .form {
+    flex-direction: column;
+    gap: 46px;
+    margin-bottom: 32px;
+  }
+  /* .radio-label {
+    display: flex;
+    width: 100%;
+  } */
+}
+.slider_item::after {
+  position: absolute;
+  content: "";
+  width: calc(100% - 177px);
+  bottom: -27px;
+  left: 46px;
+  border: 2px solid rgba(0, 0, 0, 0.04);
+  border-radius: 32px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+  background: #fff;
+  padding: 42px;
+  display: flex;
+  z-index: -1;
+}
+.slider_item::before {
+  position: absolute;
+  content: "";
+  width: calc(100% - 248px);
+  bottom: -56px;
+  left: 83px;
+  border: 2px solid rgba(0, 0, 0, 0.04);
+  border-radius: 32px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+  background: #fff;
+  padding: 42px;
+  display: flex;
+  z-index: -1;
+}
+
+.slider_item_invisible {
+  display: none;
+  transition: 0.3s;
+}
+
+.slider_item_title {
+  text-align: start;
+  margin-bottom: 32px;
+}
+.slider_item_description {
+  padding-left: 25px;
+  color: rgba(42, 43, 47, 0.9);
+}
+
+.slider-img_container {
+  display: flex;
+}
+
+.btn {
+  padding: 20px 93px;
+  border-radius: 12px;
+  background: #0146fe;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: #fff;
+  border: none;
+  max-width: 366px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.help_section {
+  padding: 64px 0 70px;
+  background: #f4f6fd;
+}
+.help_section_title {
+  margin-bottom: 70px;
+}
+
+.possibilities {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  max-width: 918px;
+  row-gap: 56px;
+  margin-bottom: 70px;
+}
+
+@media (max-width: 654px) {
+  .possibilities {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
+.possibility_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 296px;
+}
+.possibility_title {
+  font-family: "Inter";
+  font-weight: 900;
+  font-size: 34px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  text-align: center;
+  color: #000;
+  margin-top: 24px;
+  margin-bottom: 14px;
+}
+
+.possibility_description {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #7a869c;
+}
+
+.button_container {
+  display: flex;
+}
